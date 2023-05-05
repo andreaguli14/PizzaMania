@@ -6,6 +6,7 @@
     double totcart = 0;
     string notes = "";
     string address = "";
+    bool disablecart = !Model.CartObjects.Any();
 }
 
 
@@ -30,7 +31,7 @@
     <form asp-action="Checkout">
         <input class="form-control" asp-for="@address" />
         <textarea asp-for="@notes"></textarea>
-        <button type="submit" class="btn btn-primary">Order</button>
+        <button  disabled="@disablecart" type="submit" class="btn btn-primary">Order</button>
     </form>
 </div>
 

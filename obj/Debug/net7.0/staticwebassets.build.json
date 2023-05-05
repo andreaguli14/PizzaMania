@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zYbUt5Z1+cWdFXkAfsCLHcDNplnBlCrwmJiqCJPEfc4=",
+  "Hash": "qDdIbMUij2PNiouVFCPO7206pZ8jCi4GNgsLYFwlnEI=",
   "Source": "PizzaMania",
   "BasePath": "_content/PizzaMania",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/EGS_HogwartsLegacy_AvalancheSoftware_S1_2560x1440-2baf3188eb3c1aa248bcc1af6a927b7e05052023145626.jpeg"
+    },
+    {
+      "Identity": "/Users/andreaguli14/Desktop/PizzaMania/wwwroot/img/EGS_HogwartsLegacy_AvalancheSoftware_S1_2560x1440-2baf3188eb3c1aa248bcc1af6a927b7e05052023165024.jpeg",
+      "SourceId": "PizzaMania",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andreaguli14/Desktop/PizzaMania/wwwroot/",
+      "BasePath": "_content/PizzaMania",
+      "RelativePath": "img/EGS_HogwartsLegacy_AvalancheSoftware_S1_2560x1440-2baf3188eb3c1aa248bcc1af6a927b7e05052023165024.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/EGS_HogwartsLegacy_AvalancheSoftware_S1_2560x1440-2baf3188eb3c1aa248bcc1af6a927b7e05052023165024.jpeg"
     },
     {
       "Identity": "/Users/andreaguli14/Desktop/PizzaMania/wwwroot/img/epicode_thumb05052023144555.png",
