@@ -1,0 +1,18 @@
+﻿
+@using PizzaMania.Models;
+@model Ingredient
+@{
+
+    ViewData["Title"] = "Add Ingredient";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<form class="row g-3" method="post" >
+    <div class="col-md-12">
+        <label class="form-label">Name</label>
+        <input asp-for="@Model.Name" type="text" class="form-control" id="Name">
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary btn-lg px-5 mt-3">Create</button>
+    </div>
+</form>

@@ -1,0 +1,30 @@
+﻿@using PizzaMania.Models
+@model Pizza
+@{
+
+    ViewData["Title"] = $"Pizza {Model.Name}";
+    var quantity = 0;
+}
+
+
+<form asp-action="AddToCart" asp-route-id="@Model.Id">
+
+    <div class="container-fluid">
+        <h1 class="text-center">@ViewData["Title"]</h1>
+        <h2>@Model.Price€</h2>
+        <h3>Ingredients:</h3>
+        <ul>
+            @foreach (var i in Model.Ingredients)
+            {
+                <li>@i.Name</li>
+            }
+        </ul>
+        <img src="@Model.Photo" width="300px" height="300px" />
+        <input class="form-control" asp-for="@quantity" type="number" />
+        <button onclick="this.form.submit() " class="btn btn-primary">Add To Cart</button>
+
+    </div>
+</form>
+
+
+

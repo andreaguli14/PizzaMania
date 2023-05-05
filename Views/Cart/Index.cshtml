@@ -1,0 +1,37 @@
+﻿@using PizzaMania.Models
+@model Cart
+@{
+
+    ViewData["Title"] = "Cart";
+    double totcart = 0;
+    string notes = "";
+    string address = "";
+}
+
+
+<div class="container-fluid">
+    @foreach (var i in Model.CartObjects)
+    {
+        var quantity = i.Quantity;
+        double subtot = quantity * i.Pizza.Price;
+        totcart += subtot;
+
+        <h1>@i.Pizza.Name</h1>
+        <h2>@i.Pizza.Price€</h2>
+        <img src="@i.Pizza.Photo" width="150px" height="150px" />
+        <form class="" asp-action="UpdateQuantity" asp-route-id="@i.Id">
+            <input class="form-control" onchange="this.form.submit()" asp-for="@quantity" />
+        </form>
+        <h2>Subtot: @subtot</h2>
+        <hr />
+    }
+    <h1>Tot Cart: @totcart</h1>
+
+    <form asp-action="Checkout">
+        <input class="form-control" asp-for="@address" />
+        <textarea asp-for="@notes"></textarea>
+        <button type="submit" class="btn btn-primary">Order</button>
+    </form>
+</div>
+
+

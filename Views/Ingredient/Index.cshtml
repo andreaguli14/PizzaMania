@@ -1,0 +1,36 @@
+﻿@using PizzaMania.Models
+@model List<Ingredient>
+@{
+
+    ViewData["Title"] = "Ingredient";
+}
+
+
+
+
+<div class="container-fluid">
+    <h1 class="text-center">@ViewData["Title"]</h1>
+    <button onclick="location.href='@Url.Action("AddIngredient")'" class="btn btn-success">Add Ingredient</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ingredient in Model)
+            {
+                <tr>
+                    <td>@ingredient.Name</td>
+               
+                    <td><a asp-action="EditIngredient" asp-route-id="@ingredient.Id">Edit</a> <a asp-action="DeleteIngredient" asp-route-id="@ingredient.Id">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+</div>
+</table>
+
+
+

@@ -1,0 +1,29 @@
+﻿@using PizzaMania.Models
+@model List<Pizza>
+@{
+
+    ViewData["Title"] = "Pizze Store";
+}
+
+
+
+
+<div class="container-fluid">
+    <h1 class="text-center">@ViewData["Title"]</h1>
+    <div class="row d-flex justify-content-center"">
+        @foreach (var pizza in Model)
+        {
+            <div class="card col-md-3 mx-3 my-3" style="width: 18rem;">
+                <img class="card-img-top" src="@pizza.Photo" alt="@pizza.Name">
+                <div class="card-body">
+                    <h5 class="card-title">@pizza.Name</h5>
+                    <a href="/pizza/pizzadetails/@pizza.Id" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        }
+    </div>
+  
+</div>
+
+
+

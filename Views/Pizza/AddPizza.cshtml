@@ -1,0 +1,38 @@
+﻿
+@using PizzaMania.Models;
+@using PizzaMania.Data;
+@model AddPizza
+@inject ApplicationDbContext _db;
+@{
+
+    var ingredient = _db.Ingredients.ToList();
+    ViewData["Title"] = "Add Customer";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<form class="row g-3" method="post" enctype="multipart/form-data">
+    <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <input asp-for="@Model.Pizza.Name" type="text" class="form-control" id="Name">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Price</label>
+        <input asp-for="@Model.Pizza.Price" type="text" class="form-control" id="Price">
+    </div>
+    <div class="col-6">
+        <label class="form-label">Ingredients</label>
+        <select  class="form-control" multiple asp-for="@Model.Ingredients">
+            @foreach(var i in ingredient)
+            {
+               <option value="@i.Id">@i.Name</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Upload Photo</label>
+        <input asp-for="@Model.Pizza.formFile" type="file" class="form-control" id="Photo">
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary btn-lg px-5 mt-3">Create</button>
+    </div>
+</form>
